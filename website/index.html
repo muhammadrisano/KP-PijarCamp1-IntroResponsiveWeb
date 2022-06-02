@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .header {
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(#bccfff70 100%, #fff 0%),
+          url("./assets/images/background-image.png");
+        font-family: "Inter", sans-serif;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+      }
+      .wrapper {
+        width: 450px;
+        /* margin: auto; */
+        /* background-color: lightgreen; */
+      }
+      .wrapper .title {
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        font-size: 64px;
+        font-weight: 500;
+        color: #355c80;
+        margin-bottom: 20px;
+      }
+      .wrapper .content {
+        font-size: 16px;
+        color: #0a0a0a;
+        text-align: center;
+        line-height: 24px;
+        font-weight: 400;
+      }
+      .wrapper-form input,
+      .wrapper-form button {
+        display: block;
+      }
+      .wrapper-form {
+        width: 277px;
+        /* background-color: lightgrey; */
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .wrapper-form input {
+        width: 100%;
+        box-sizing: border-box;
+        border-width: 0;
+        border-radius: 8px;
+        padding: 8px;
+        font-size: 14px;
+        outline: none;
+        margin-bottom: 10px;
+      }
+      .wrapper-form button {
+        width: 100%;
+        border-radius: 8px;
+        border-width: 0;
+        font-size: 14px;
+        padding: 8px;
+        background-color: #355c80;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .wrapper-form button:hover {
+        background-color: #647e96;
+      }
+      #main {
+        height: 300px;
+        width: 100vw;
+        padding-top: 20px;
+        font-family: "Inter", sans-serif;
+      }
+      .main-title {
+        font-size: 30px;
+        font-weight: 400;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        margin-top: 0;
+      }
+      .wrapper-items {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+      }
+      .box-item {
+        background-color: #eef6f8;
+        width: 255px;
+        height: 165px;
+        border-radius: 8px;
+        padding: 6px;
+      }
+      .box-item h2 {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+      }
+      .box-item p {
+        font-size: 13px;
+      }
+      .footer-content {
+        text-align: center;
+        font-size: 16px;
+        padding: 20px 10px;
+        border-top: 2px solid black;
+      }
+      .navbar{
+        background-color: lightskyblue;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 100px;
+        padding-right: 100px;
+        font-family: "Inter", sans-serif;
+        flex-wrap: wrap;
+      }
+      .nav-links-main, .nav-links-auth{
+        list-style: none;
+        display: flex;
+      }
+      .nav-item a{
+        text-decoration: none;
+        padding: 10px 16px;
+        color: #355C80;
+        font-size: 15px;
+      }
+      .nav-title{
+        font-weight: bold;
+      }
+      .menu{
+        display: none;
+        cursor: pointer;
+      }
+      /* untuk mobile */
+      @media screen and (max-width: 576px) {
+        .wrapper-items {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+        .menu{
+        display: block;
+        margin: 0 20px;
+        }
+        .navbar{
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        .nav-item .nav-title{
+          padding-left: 0px;
+        }
+        .nav-links-auth{
+          flex-direction: column;
+          width: 100%;
+        }
+        .nav-links-auth a{
+          padding: 10px 10px;
+          display: inline-block;
+          width: 100%;
+        }
+        .nav-item{
+          height: 40px;
+        }
+      }
+      /* untuk table  */
+      @media (max-width: 768px) {
+        .wrapper-items {
+          flex-wrap: wrap;
+        }
+        .box-item {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-links-main">
+        <li class="nav-item">
+          <a href="" class="nav-title">Lautan</a>
+        </li>
+        <li class="nav-item">
+          <a href="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href=""> About </a>
+        </li>
+      </ul>
+      
+      <div class="menu"><p>Menu</p></div>
+      <ul class="nav-links-auth">
+        <li class="nav-item">
+          <a href="">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="">Register</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="header" id="header">
+      <div class="wrapper">
+        <h1 class="title">Lautan</h1>
+        <p class="content">
+          Mendengar gemuruh ombak, menyelam ke dasar laut, atau menikmati rasa
+          ikan segar di pinggir pantai? Ciptakan kenangan indah yang akan anda
+          kenang selamanya!
+        </p>
+        <div class="wrapper-form">
+          <input type="text" placeholder="Nomor telepon.." />
+          <button>Mulai perjalanan anda</button>
+        </div>
+      </div>
+    </section>
+    <section id="main">
+      <h2 class="main-title">Tentang Lautan</h2>
+      <div class="wrapper-items">
+        <div class="box-item">
+          <h2>Murah</h2>
+          <p>
+            Lautan adalah agensi yang terpercaya dengan kemurahan harga dari
+            paket yang ditawarkan.
+          </p>
+        </div>
+        <div class="box-item">
+          <h2>Mudah</h2>
+          <p>
+            Sangat mudah menyusun liburan yang indah dengan Lautan. Cukup telpon
+            dan kami atur semuanya.
+          </p>
+        </div>
+        <div class="box-item">
+          <h2>Mewah</h2>
+          <p>
+            Diving dengan paus, hingga kencan romantis dengan kapal pesiar?
+            Semaua kegiatan mewah itu bisa!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- <footer id="footer">
+      <p class="footer-content">Copyright - Lautan 2022</p>
+    </footer> -->
+  </body>
+</html>
